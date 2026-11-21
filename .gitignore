@@ -1,0 +1,16 @@
+# Secrets — never commit these. The HMAC secret is issued once by the
+# AgentGames dashboard (Rotate Secret); the strategy salt is your private
+# commitment nonce. Both live in .env on the host only.
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Runtime state (idempotency cache / logs live here if enabled)
+data/
+
+# OS / editor noise
+.DS_Store
+*.log
